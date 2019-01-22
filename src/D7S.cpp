@@ -112,7 +112,7 @@ uint8_t D7SClass::read8bit(uint8_t regH, uint8_t regL)
    delay(10);
 
    //send RE-START message
-   uint8_t status = WireD7S.endTransmission(false);
+   uint8_t status = WireD7S.endTransmission();
 
    //if the status != 0 there is an error
    if (status != 0)
@@ -147,7 +147,7 @@ uint16_t D7SClass::read16bit(uint8_t regH, uint8_t regL)
    delay(10);
 
    //send RE-START message
-   uint8_t status = WireD7S.endTransmission(false);
+   uint8_t status = WireD7S.endTransmission();
 
    //if the status != 0 there is an error
    if (status != 0)
