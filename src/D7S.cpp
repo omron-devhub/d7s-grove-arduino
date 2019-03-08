@@ -43,13 +43,13 @@ void D7SClass::setAxis(d7s_axis_settings axisMode)
 //get instantaneus SI (during an earthquake) [m/s]
 float D7SClass::getInstantaneusSI()
 {
-   return ((float)read16bit(0x20, 0x00)) / 1000;
+   return ((float)read16bit(0x20, 0x00)) / 10;
 }
 
 //get instantaneus PGA (during an earthquake) [m/s^2]
 float D7SClass::getInstantaneusPGA()
 {
-   return ((float)read16bit(0x20, 0x02)) / 1000;
+   return ((float)read16bit(0x20, 0x02)) / 10;
 }
 
 //initialize the d7s (start the initial installation mode)
